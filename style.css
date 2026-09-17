@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+header h1 {
+  font-size: 26px;
+  color: #38bdf8;
+}
+
+.add-task-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.add-task-bar input {
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #fff;
+  outline: none;
+}
+
+.add-task-bar input:focus {
+  border-color: #38bdf8;
+}
+
+.add-task-bar button {
+  padding: 10px 20px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  color: #0f172a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-task-bar button:hover {
+  background: #0284c7;
+  color: #fff;
+}
+
+/* Сетка доски */
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.column {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 450px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #334155;
+}
+
+.todo-head { border-color: #f59e0b; }
+.progress-head { border-color: #38bdf8; }
+.done-head { border-color: #22c55e; }
+
+.count {
+  background: #334155;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Карточка задачи */
+.task-card {
+  background: #334155;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.task-actions button {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.task-actions button:hover {
+  color: #38bdf8;
+}
+
+.task-actions button.btn-delete:hover {
+  color: #ef4444;
+}
